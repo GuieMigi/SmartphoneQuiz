@@ -1,0 +1,76 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Smartphone Quiz</string>
+
+    <!--The toast that is displayed if the player scores 10 points-->
+    <string name="perfect_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You are a smartphone genius.</string>
+    <!--The toast that is displayed if the player scores at least 6 points-->
+    <string name="average_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You know your way around smartphones, but there\'s still a lot to learn.</string>
+    <!--The toast that is displayed if the player scores less than 6 points-->
+    <string name="lame_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>, on completing the Smartphone Quiz! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You should improve your knowledge on smartphones.</string>
+    <!--The toast that is displayed if the player scores 0 points-->
+    <string name="no_score_toast">You\'re not even trying <xliff:g example="George" id="playerName">%s</xliff:g>. You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. Put your back in it!</string>
+    <!--The message displayed to the user when the app starts-->
+    <string name="welcome_message">Welcome to the smartphone quiz. This quiz will test your knowledge of the smartphone world. Please enter your name below.</string>
+    <!--The hint for the EditText where the user enters his/her name-->
+    <string name="name_edit_text_hint">Enter your name here</string>
+    <!--The hint for Question 3 EditText-->
+    <string name="question_3_edit_text_hint">Name of the manufacturer</string>
+    <!--The text for the Check Results button-->
+    <string name="check_results_button">Check results</string>
+    <!--The text for the Restart Quiz button-->
+    <string name="restart_quiz_button">Restart quiz</string>
+    <!--The content description of the background image-->
+    <string name="background_image_content_description">A collection of random smartphones from random manufacturers</string>
+    <!--The ten questions of the quiz-->
+    <string name="question_1">1. Which of the manufacturers listed below build smartphones?</string>
+    <string name="question_2">2. What’s the most popular smartphone operating system?</string>
+    <string name="question_3">3. What\'s the name of the manufacturer that introduced the \"Galaxy\" line of smartphones?</string>
+    <string name="question_4">4. Which manufacturer was the first to introduce a flexible smartphone?</string>
+    <string name="question_5">5. In what year did Samsung launch the Galaxy S smartphone?</string>
+    <string name="question_6">6. Which manufacturer was the first to introduce a 4K UHD display on a smartphone?</string>
+    <string name="question_7">7. In what year did LG launch the G Flex smartphone?</string>
+    <string name="question_8">8. What’s the biggest camera sensor ever to be fitted on a smartphone?</string>
+    <string name="question_9">9. What’s the most fragile part of a smartphone?</string>
+    <string name="question_10">10. Why is it so difficult and expensive to change the display of your smartphone?</string>
+    <!--Answer choices for question 1-->
+    <string name="question_1_choice_1">Samsung</string>
+    <string name="question_1_choice_2">Bosch</string>
+    <string name="question_1_choice_3">Sony</string>
+    <string name="question_1_choice_4">Siemens</string>
+    <string name="question_1_choice_5">Caterpillar</string>
+    <string name="question_1_choice_6">Micromax</string>
+    <!--Answer choices for question 2-->
+    <string name="question_2_choice_1">iOS</string>
+    <string name="question_2_choice_2">Symbian</string>
+    <string name="question_2_choice_3">Android</string>
+    <!--Correct answer for question 3-->
+    <string name="question_3_choice_1">Samsung</string>
+    <!--Answer choices for question 4-->
+    <string name="question_4_choice_1">LG</string>
+    <string name="question_4_choice_2">Huawei</string>
+    <string name="question_4_choice_3">Motorola</string>
+    <!--Answer choices for question 5-->
+    <string name="question_5_choice_1">2009</string>
+    <string name="question_5_choice_2">2010</string>
+    <string name="question_5_choice_3">2011</string>
+    <!--Answer choices for question 6-->
+    <string name="question_6_choice_1">Sony</string>
+    <string name="question_6_choice_2">LG</string>
+    <string name="question_6_choice_3">Samsung</string>
+    <!--Answer choices for question 7-->
+    <string name="question_7_choice_1">2011</string>
+    <string name="question_7_choice_2">2012</string>
+    <string name="question_7_choice_3">2013</string>
+    <!--Answer choices for question 8-->
+    <string name="question_8_choice_1">15MP</string>
+    <string name="question_8_choice_2">23MP</string>
+    <string name="question_8_choice_3">41MP</string>
+    <!--Answer choices for question 9-->
+    <string name="question_9_choice_1">Display</string>
+    <string name="question_9_choice_2">Battery</string>
+    <string name="question_9_choice_3">Processor</string>
+    <!--Answer choices for question 10-->
+    <string name="question_10_choice_1">Manufacturers don\'t care about us</string>
+    <string name="question_10_choice_2">The quest for display quality leads to complicated manufacturing methods</string>
+    <string name="question_10_choice_3">Manufacturers only care about selling spare parts and new smartphones</string>
+</resources>
