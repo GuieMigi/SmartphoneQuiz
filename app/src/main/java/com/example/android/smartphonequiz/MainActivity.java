@@ -18,21 +18,40 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * The total score of the user based on the answers selected.
-     */
     int score;
-    String savedScore;
-    EditText name;
+    String savedScore, playerName;
     EditText questionThreeUserAnswer;
+    String scoreMessage;
+    CheckBox questionOneChoiceOne, questionOneChoiceTwo, questionOneChoiceThree, questionOneChoiceFour,
+            questionOneChoiceFive, questionOneChoiceSix, questionTenChoiceOne, questionTenChoiceTwo, questionTenChoiceThree;
+    RadioButton questionTwoChoiceThree, questiondFourChoiceOne, questionFiveChoiceTwo, questionSixChoiceOne,
+            questionSevenChoiceThree, questionEightChoiceThree, questionNineChoiceOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        name = findViewById(R.id.name_edit_text);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.
+                LayoutParams.FLAG_FULLSCREEN);
+        questionOneChoiceOne = findViewById(R.id.question_1_choice_1);
+        questionOneChoiceTwo = findViewById(R.id.question_1_choice_2);
+        questionOneChoiceThree = findViewById(R.id.question_1_choice_3);
+        questionOneChoiceFour = findViewById(R.id.question_1_choice_4);
+        questionOneChoiceFive = findViewById(R.id.question_1_choice_5);
+        questionOneChoiceSix = findViewById(R.id.question_1_choice_6);
+        questionTwoChoiceThree = findViewById(R.id.question_2_choice_3);
         questionThreeUserAnswer = findViewById(R.id.question_3_edit_text);
+        questiondFourChoiceOne = findViewById(R.id.question_4_choice_1);
+        questionFiveChoiceTwo = findViewById(R.id.question_5_choice_2);
+        questionSixChoiceOne = findViewById(R.id.question_6_choice_1);
+        questionSevenChoiceThree = findViewById(R.id.question_7_choice_3);
+        questionEightChoiceThree = findViewById(R.id.question_8_choice_3);
+        questionNineChoiceOne = findViewById(R.id.question_9_choice_1);
+        questionTenChoiceOne = findViewById(R.id.question_10_choice_1);
+        questionTenChoiceTwo = findViewById(R.id.question_10_choice_2);
+        questionTenChoiceThree = findViewById(R.id.question_10_choice_3);
+        Intent getUserName = getIntent();
+        playerName = getUserName.getStringExtra("NAME");
     }
 
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -51,14 +70,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         View view = getCurrentFocus();
-        if (view != null && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_MOVE) && view instanceof EditText && !view.getClass().getName().startsWith("android.webkit.")) {
-            int scrcoords[] = new int[2];
-            view.getLocationOnScreen(scrcoords);
-            float x = ev.getRawX() + view.getLeft() - scrcoords[0];
-            float y = ev.getRawY() + view.getTop() - scrcoords[1];
+        if (view != null && (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent
+                .ACTION_MOVE) && view instanceof EditText && !view.getClass().getName()
+                .startsWith("android.webkit.")) {
+            int screenCoordinates[] = new int[2];
+            view.getLocationOnScreen(screenCoordinates);
+            float x = ev.getRawX() + view.getLeft() - screenCoordinates[0];
+            float y = ev.getRawY() + view.getTop() - screenCoordinates[1];
             if (x < view.getLeft() || x > view.getRight() || y < view.getTop() || y > view.getBottom())
-                ((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow((this.getWindow().getDecorView().getApplicationWindowToken()), 0);
-            name.clearFocus();
+                ((InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE))
+                        .hideSoftInputFromWindow((this.getWindow().getDecorView()
+                                .getApplicationWindowToken()), 0);
             questionThreeUserAnswer.clearFocus();
         }
         return super.dispatchTouchEvent(ev);
@@ -69,19 +91,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void calculateScore(View view) {
         score = 0;
-        /**
-         * The EditText where the player enters his/her name.
-         */
-        String playerName = name.getText().toString();
-        /**
-         * Question 1 CheckBoxes.
-         */
-        CheckBox questionOneChoiceOne = findViewById(R.id.question_1_choice_1);
-        CheckBox questionOneChoiceTwo = findViewById(R.id.question_1_choice_2);
-        CheckBox questionOneChoiceThree = findViewById(R.id.question_1_choice_3);
-        CheckBox questionOneChoiceFour = findViewById(R.id.question_1_choice_4);
-        CheckBox questionOneChoiceFive = findViewById(R.id.question_1_choice_5);
-        CheckBox questionOneChoiceSix = findViewById(R.id.question_1_choice_6);
 
         /**
          * Checks if the wrong answers are checked and if the correct answers are checked for question 1.
@@ -92,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             if (questionOneChoiceThree.isChecked()) {
                 if (questionOneChoiceFive.isChecked()) {
                     if (questionOneChoiceSix.isChecked()) {
-                        score += 1;
+                        score++;
                     }
                 }
             }
@@ -102,81 +111,67 @@ public class MainActivity extends AppCompatActivity {
          * Checks if the correct answer is checked for question 2.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionTwoChoiceThree = findViewById(R.id.question_2_choice_3);
         if (questionTwoChoiceThree.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
-         * Checks if the correct name is entered in the EditText.
-         * If the correct name is entered then it ads one point to the score.
+         * Checks if the correct answer is entered in the EditText from question 3.
+         * If the correct answer is entered then it ads one point to the score.
          */
         String questionThreeAnswer = questionThreeUserAnswer.getText().toString();
         String questionThreeCorrectAnswer = getString(R.string.question_3_choice_1);
         if (questionThreeAnswer.equalsIgnoreCase(questionThreeCorrectAnswer)) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 4.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questiondFourChoiceOne = findViewById(R.id.question_4_choice_1);
         if (questiondFourChoiceOne.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 5.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionFiveChoiceTwo = findViewById(R.id.question_5_choice_2);
         if (questionFiveChoiceTwo.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 6.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionSixChoiceOne = findViewById(R.id.question_6_choice_1);
         if (questionSixChoiceOne.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 7.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionSevenChoiceThree = findViewById(R.id.question_7_choice_3);
         if (questionSevenChoiceThree.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 8.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionEightChoiceThree = findViewById(R.id.question_8_choice_3);
         if (questionEightChoiceThree.isChecked()) {
-            score += 1;
+            score++;
         }
 
         /**
          * Checks if the correct answer is checked for question 9.
          * If the correct answer is checked then it ads one point to the score.
          */
-        RadioButton questionNineChoiceOne = findViewById(R.id.question_9_choice_1);
         if (questionNineChoiceOne.isChecked()) {
-            score += 1;
+            score++;
         }
-
-        /**
-         * Question 10 CheckBoxes.
-         */
-        CheckBox questionTenChoiceOne = findViewById(R.id.question_10_choice_1);
-        CheckBox questionTenChoiceTwo = findViewById(R.id.question_10_choice_2);
-        CheckBox questionTenChoiceThree = findViewById(R.id.question_10_choice_3);
 
         /**
          * Checks if the correct answers are checked for question 10.
@@ -185,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         if (questionTenChoiceOne.isChecked()) {
             if (questionTenChoiceTwo.isChecked()) {
                 if (questionTenChoiceThree.isChecked()) {
-                    score += 1;
+                    score++;
                 }
             }
         }
@@ -193,21 +188,32 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Creates a toast message containing the results, when the "Check results" button is clicked.
          */
-        if (score == 10) {
-            Toast.makeText(this, getString(R.string.perfect_score_toast, playerName, score), Toast.LENGTH_LONG).show();
-        } else if (score >= 6 && score < 10) {
-            Toast.makeText(this, getString(R.string.average_score_toast, playerName, score), Toast.LENGTH_LONG).show();
-        } else if (score == 0) {
-            Toast.makeText(this, getString(R.string.no_score_toast, playerName, score), Toast.LENGTH_LONG).show();
+        if (score == 1) {
+            Toast.makeText(this, getString(R.string.one_point_score_toast, score), Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, getString(R.string.lame_score_toast, playerName, score), Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.score_toast, score), Toast.LENGTH_SHORT).show();
         }
-    }
 
-    public void restartQuiz(View view) {
-        Intent MainActivity = getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage(getBaseContext().getPackageName());
-        MainActivity.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(MainActivity);
+        /**
+         * Creates the scoreMessage when the "Check results" button is clicked.
+         */
+        if (score == 10) {
+            scoreMessage = getString(R.string.perfect_score_message, playerName, score);
+        } else if (score >= 6 && score < 10) {
+            scoreMessage = getString(R.string.average_score_message, playerName, score);
+        } else if (score == 0) {
+            scoreMessage = getString(R.string.no_score_message, playerName, score);
+        } else {
+            scoreMessage = getString(R.string.lame_score_message, playerName, score);
+        }
+
+        /**
+         * Launches the "ResultsActivity" and sends the scoreMessage when the "Check results" button is clicked.
+         */
+        Intent startResultsActivity = new Intent(this, ResultsActivity.class);
+        startResultsActivity.putExtra("SCOREMESSAGE", scoreMessage);
+        if (startResultsActivity.resolveActivity(getPackageManager()) != null) {
+            startActivity(startResultsActivity);
+        }
     }
 }

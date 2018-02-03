@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/smartphone_quiz_start_activity_background" />
+
+    <FrameLayout
+        style="@style/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/welcome_message"
+        style="@style/MessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/name_edit_text"
+        android:text="@string/welcome_message" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/marginPadding_32dp"
+        android:backgroundTint="@color/editTextBackgroundTintColor"
+        android:gravity="center"
+        android:hint="@string/name_edit_text_hint"
+        android:maxEms="10"
+        android:minEms="10"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/editTextHintColor" />
+
+    <Button
+        android:id="@+id/start_quiz_button"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_edit_text"
+        android:layout_centerHorizontal="true"
+        android:onClick="startQuiz"
+        android:text="@string/start_quiz_button" />
+
+</RelativeLayout>

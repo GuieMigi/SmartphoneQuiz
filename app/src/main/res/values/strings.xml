@@ -1,26 +1,37 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Smartphone Quiz</string>
 
+    <!--The toast that is displayed if the name EditText is empty-->
+    <string name="enter_name_toast">You need to enter your name before starting the quiz</string>
+    <!--The toast that is displayed when the score is 1-->
+    <string name="one_point_score_toast">You have scored <xliff:g example="2" id="score">%d</xliff:g> point</string>
+    <!--The toast that is displayed to show the score-->
+    <string name="score_toast">You have scored <xliff:g example="2" id="score">%d</xliff:g> points</string>
     <!--The toast that is displayed if the player scores 10 points-->
-    <string name="perfect_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You are a smartphone genius.</string>
+    <string name="perfect_score_message">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You are a smartphone genius.</string>
     <!--The toast that is displayed if the player scores at least 6 points-->
-    <string name="average_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You know your way around smartphones, but there\'s still a lot to learn.</string>
+    <string name="average_score_message">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You know your way around smartphones, but there\'s still a lot to learn.</string>
     <!--The toast that is displayed if the player scores less than 6 points-->
-    <string name="lame_score_toast">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>, on completing the Smartphone Quiz! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You should improve your knowledge on smartphones.</string>
+    <string name="lame_score_message">Congratulations <xliff:g example="George" id="playerName">%s</xliff:g>, on completing the Smartphone Quiz! You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. You should improve your knowledge on smartphones.</string>
     <!--The toast that is displayed if the player scores 0 points-->
-    <string name="no_score_toast">You\'re not even trying <xliff:g example="George" id="playerName">%s</xliff:g>. You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. Put your back in it!</string>
+    <string name="no_score_message">You\'re not even trying <xliff:g example="George" id="playerName">%s</xliff:g>. You have answered correctly to <xliff:g example="2" id="score">%d</xliff:g> out of 10 questions. Put your back into it!</string>
     <!--The message displayed to the user when the app starts-->
     <string name="welcome_message">Welcome to the smartphone quiz. This quiz will test your knowledge of the smartphone world. Please enter your name below.</string>
     <!--The hint for the EditText where the user enters his/her name-->
     <string name="name_edit_text_hint">Enter your name here</string>
     <!--The hint for Question 3 EditText-->
     <string name="question_3_edit_text_hint">Name of the manufacturer</string>
-    <!--The text for the Check Results button-->
+    <!--The text for the Start quiz button-->
+    <string name="start_quiz_button">Start quiz</string>
+    <!--The text for the Check results button-->
     <string name="check_results_button">Check results</string>
-    <!--The text for the Restart Quiz button-->
+    <!--The text for the Share results button-->
+    <string name="share_results_button">Share results</string>
+    <!--The text for the Restart quiz button-->
     <string name="restart_quiz_button">Restart quiz</string>
     <!--The content description of the background image-->
     <string name="background_image_content_description">A collection of random smartphones from random manufacturers</string>
+    <string name="share_results_message_subject">Smartphone quiz results</string>
     <!--The ten questions of the quiz-->
     <string name="question_1">1. Which of the manufacturers listed below build smartphones?</string>
     <string name="question_2">2. What’s the most popular smartphone operating system?</string>
