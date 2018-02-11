@@ -9,7 +9,7 @@
     </style>
 
     <style name="FrameLayout">
-        <item name="android:alpha">0.4</item>
+        <item name="android:alpha">0.6</item>
         <item name="android:background">@color/frameLayoutBackground</item>
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>

@@ -6,6 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:contentDescription="@string/background_image_content_description"
         android:scaleType="centerCrop"
         android:src="@drawable/smartphone_quiz_start_activity_background" />
