@@ -18,13 +18,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int score;
-    String savedScore, playerName;
-    EditText questionThreeUserAnswer;
-    String scoreMessage;
-    CheckBox questionOneChoiceOne, questionOneChoiceTwo, questionOneChoiceThree, questionOneChoiceFour,
+    public int score;
+    String savedScore, playerName, scoreMessage;
+    private EditText questionThreeUserAnswer;
+    private CheckBox questionOneChoiceOne, questionOneChoiceTwo, questionOneChoiceThree, questionOneChoiceFour,
             questionOneChoiceFive, questionOneChoiceSix, questionTenChoiceOne, questionTenChoiceTwo, questionTenChoiceThree;
-    RadioButton questionTwoChoiceThree, questiondFourChoiceOne, questionFiveChoiceTwo, questionSixChoiceOne,
+    private RadioButton questionTwoChoiceThree, questiondFourChoiceOne, questionFiveChoiceTwo, questionSixChoiceOne,
             questionSevenChoiceThree, questionEightChoiceThree, questionNineChoiceOne;
 
     @Override

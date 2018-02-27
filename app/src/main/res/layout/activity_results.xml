@@ -4,24 +4,16 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/background_image_content_description"
-        android:scaleType="centerCrop"
+        style="@style/backgroundImage"
         android:src="@drawable/smartphone_quiz_results_activity_background" />
 
-    <FrameLayout
-        style="@style/FrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <FrameLayout style="@style/frameLayout">
 
     </FrameLayout>
 
     <TextView
         android:id="@+id/results_text_view"
-        style="@style/MessageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/messagesTextView"
         android:layout_centerInParent="true"
         android:text="" />
 
@@ -35,9 +27,7 @@
 
         <Button
             android:id="@+id/share_results_button"
-            style="@style/Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/button"
             android:layout_marginEnd="@dimen/marginPadding_8dp"
             android:layout_marginRight="@dimen/marginPadding_8dp"
             android:onClick="shareResults"
@@ -45,9 +35,7 @@
 
         <Button
             android:id="@+id/restat_quiz_button"
-            style="@style/Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/button"
             android:layout_marginLeft="@dimen/marginPadding_8dp"
             android:layout_marginStart="@dimen/marginPadding_8dp"
             android:onClick="restartQuiz"

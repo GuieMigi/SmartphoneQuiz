@@ -8,48 +8,100 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FrameLayout">
+    <!-- The style used for the background image ImageViews. -->
+    <style name="backgroundImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:contentDescription">@string/background_image_content_description</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- The style used for the FrameLayouts. -->
+    <style name="frameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:alpha">0.6</item>
         <item name="android:background">@color/frameLayoutBackground</item>
         <item name="android:focusable">true</item>
         <item name="android:focusableInTouchMode">true</item>
     </style>
 
-    <style name="QuestionTextView">
+    <!-- The style used for the EditText. -->
+    <style name="editText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginBottom">@dimen/marginPadding_32dp</item>
+        <item name="android:backgroundTint">@color/editTextBackgroundTintColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxEms">10</item>
+        <item name="android:minEms">10</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/editTextHintColor</item>
+    </style>
+
+    <!-- The style used for the buttons. -->
+    <style name="button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/layout_bg</item>
+        <item name="android:padding">@dimen/marginPadding_8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <!-- The style used for the questions. -->
+    <style name="questionTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/marginPadding_8dp</item>
         <item name="android:background">@drawable/layout_bg</item>
         <item name="android:padding">@dimen/marginPadding_4dp</item>
         <item name="android:textColor">@color/textColor</item>
     </style>
 
-    <style name="AnswerCheckBox">
+    <!-- The style used for the LinearLayout. -->
+    <style name="linearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/marginPadding_16dp</item>
+        <item name="android:layout_marginLeft">@dimen/marginPadding_16dp</item>
+        <item name="android:layout_marginRight">@dimen/marginPadding_16dp</item>
+        <item name="android:layout_marginStart">@dimen/marginPadding_16dp</item>
+    </style>
+
+    <!-- The style used for the answer CheckBoxes. -->
+    <style name="checkBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/marginPadding_4dp</item>
         <item name="android:buttonTint">@color/checkBoxColor</item>
         <item name="android:textColor">@color/textColor</item>
     </style>
 
-    <style name="RadioButton">
+    <!-- The style used for the RadioGroup. -->
+    <style name="radioGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/marginPadding_16dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- The style used for the answer RadioButtons. -->
+    <style name="radioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:buttonTint">@color/checkBoxColor</item>
         <item name="android:textColor">@color/textColor</item>
     </style>
 
-    <style name="MessageTextView">
+    <!-- The style used for the welcome message and the results message TextViews. -->
+    <style name="messagesTextView" parent="linearLayout">
         <item name="android:layout_marginBottom">@dimen/marginPadding_32dp</item>
-        <item name="android:layout_marginEnd">@dimen/marginPadding_16dp</item>
-        <item name="android:layout_marginLeft">@dimen/marginPadding_16dp</item>
-        <item name="android:layout_marginRight">@dimen/marginPadding_16dp</item>
-        <item name="android:layout_marginStart">@dimen/marginPadding_16dp</item>
         <item name="android:background">@drawable/layout_bg</item>
         <item name="android:padding">@dimen/marginPadding_8dp</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:textSize">@dimen/welcomeMessageTextSize</item>
-    </style>
-
-    <style name="Button">
-        <item name="android:background">@drawable/layout_bg</item>
-        <item name="android:padding">@dimen/marginPadding_8dp</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:textColor">@color/textColor</item>
     </style>
 
 </resources>

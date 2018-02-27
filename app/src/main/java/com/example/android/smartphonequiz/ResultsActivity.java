@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    String scoreMessage;
-    TextView resultsTextView;
+    private String scoreMessage;
+    private TextView resultsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

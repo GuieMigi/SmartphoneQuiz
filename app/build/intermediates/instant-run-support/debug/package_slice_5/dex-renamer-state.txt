@@ -1,4 +1,4 @@
-#Sat Feb 03 17:31:14 EET 2018
-base.0=C\:\\Users\\Florin\\Documents\\SmartphoneQuiz\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+#Tue Feb 27 19:46:51 EET 2018
+base.0=C\:\\Users\\Florin\\Documents\\SmartphoneQuiz\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\24
 path.0=classes.dex
 renamed.0=classes.dex
