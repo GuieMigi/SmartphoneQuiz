@@ -54,9 +54,7 @@ public class StartActivity extends AppCompatActivity {
         } else {
             Intent startMainActivity = new Intent(this, MainActivity.class);
             startMainActivity.putExtra("NAME", playerName);
-            if (startMainActivity.resolveActivity(getPackageManager()) != null) {
                 startActivity(startMainActivity);
-            }
         }
     }
 }

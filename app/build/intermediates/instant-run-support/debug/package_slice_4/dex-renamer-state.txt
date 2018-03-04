@@ -1,4 +1,4 @@
-#Tue Feb 27 20:43:33 EET 2018
-base.0=C\:\\Users\\Florin\\Documents\\SmartphoneQuiz\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
+#Sun Mar 04 19:22:10 EET 2018
+base.0=D\:\\Android Apps\\SmartphoneQuiz\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 path.0=classes.dex
 renamed.0=classes.dex
