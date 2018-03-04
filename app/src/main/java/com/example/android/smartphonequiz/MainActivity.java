@@ -211,8 +211,6 @@ public class MainActivity extends AppCompatActivity {
          */
         Intent startResultsActivity = new Intent(this, ResultsActivity.class);
         startResultsActivity.putExtra("SCOREMESSAGE", scoreMessage);
-        if (startResultsActivity.resolveActivity(getPackageManager()) != null) {
             startActivity(startResultsActivity);
-        }
     }
 }
